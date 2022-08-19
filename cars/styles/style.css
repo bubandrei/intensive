@@ -143,3 +143,58 @@ font-size: 80px;
  .car-item-point > div:nth-child(2){
      font-weight: bold;
  }
+ .price{
+     overflow: hidden;
+ }
+ .price .container{
+     position: relative;
+     padding-bottom: 121px;
+ }
+ .price .sub-title{
+     margin-bottom: 20px;
+ }
+ .price-text{
+     font-size: 16px;
+     line-height: 130%;
+     color: #5D5D5F;
+     margin-bottom: 60px;
+ }
+ .price-form{
+     max-width: 344px;
+ }
+ .price-input{
+     padding: 22px 18px;
+     width: 344px;
+     height: 65px;
+     background: #ffffff;
+     border: 1px solid #5D5D5F;
+     box-sizing: border-box;
+     font-size: 16px;
+     color: #000000;
+     outline: none;
+     margin-bottom: 15px;
+ }
+ .price-input::placeholder{
+     color: #5D5D5F;
+ }
+ .price .button{
+     width: 100%;
+ }
+ .price-image{
+     position: absolute;
+     bottom: 0;
+     left: 401px;
+ }
+ .footer{
+     border: 1px solid #E5E5E5;
+     padding: 25px 0;
+ }
+ .footer .container{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .rights{
+     font-size: 15px;
+     color: #030305;
+ }
