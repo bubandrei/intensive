@@ -22,12 +22,12 @@ document.getElementById("price-action").onclick = function (){
 document.addEventListener("DOMContentLoaded", function () {
     let layer = document.querySelector('.price-image');
     document.addEventListener('mousemove', (event) => {
-        layer.style.transform = 'translate3d(' + ((event.clientX * 0.2) / 8) + 'px,' + ((event.clientY * 0.2) / 8) + 'px,0px)';
+        layer.style.transform = 'translate3d(' + ((event.clientX * 0.1) / 9) + 'px,' + ((event.clientY * 0.1) / 9) + 'px,0px)';
     });
 
     const elem = document.querySelector(".main");
     document.addEventListener('scroll', () => {
-        elem.style.backgroundPositionX = '0' + (0.2 * window.pageYOffset) + 'px';
+        elem.style.backgroundPositionX = '0' + (0.1 * window.pageYOffset) + 'px';
     })
 });
 
