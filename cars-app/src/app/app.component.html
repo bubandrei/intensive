@@ -61,7 +61,7 @@
           </div>
         </div>
         <div class="car-item-action">
-          <button class="button">Забронировать</button>
+          <button class="button" (click)="goScroll(price)">Забронировать</button>
         </div>
       </div>
       <div class="car-item car-button">
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="car-item-action">
-          <button class="button">Забронировать</button>
+          <button class="button"(click)="goScroll(price)">Забронировать</button>
         </div>
       </div>
       <div class="car-item car-button">
@@ -113,7 +113,7 @@
           </div>
         </div>
         <div class="car-item-action">
-          <button class="button">Забронировать</button>
+          <button class="button"(click)="goScroll(price)">Забронировать</button>
         </div>
       </div>
       <div class="car-item car-button">
@@ -139,7 +139,7 @@
           </div>
         </div>
         <div class="car-item-action">
-          <button class="button">Забронировать</button>
+          <button class="button"(click)="goScroll(price)">Забронировать</button>
         </div>
       </div>
       <div class="car-item car-button">
@@ -165,7 +165,7 @@
           </div>
         </div>
         <div class="car-item-action">
-          <button class="button">Забронировать</button>
+          <button class="button"(click)="goScroll(price)">Забронировать</button>
         </div>
       </div>
       <div class="car-item car-button">
@@ -191,13 +191,13 @@
           </div>
         </div>
         <div class="car-item-action">
-          <button class="button">Забронировать</button>
+          <button class="button"(click)="goScroll(price)">Забронировать</button>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="price" id="price">
+<section class="price" id="price" #price>
   <div class="container">
     <h2 class="sub-title">Узнать цену и забронировать</h2>
     <div class="price-text">Заполните данные, и мы перезвоним вам для уточнения всех деталей бронирования</div>
