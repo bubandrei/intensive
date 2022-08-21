@@ -69,10 +69,16 @@
   text-transform: uppercase;
   color: #ffffff;
   transition: background-color .5s;
-}.button:hover{
+}
+.button:hover:not(:disabled){
    cursor: pointer;
    background: #575757;
  }
+.button:disabled{
+  cursor: not-allowed;
+  color: gray;
+  background-color: #343434;
+}
 .car{
   padding: 100px 0;
 }
@@ -186,4 +192,10 @@
 .rights{
   font-size: 15px;
   color: #030305;
+}
+.price-input.ng-touched.ng-valid{
+  border: 1px solid #5D5D5F;
+}
+.price-input.ng-touched.ng-invalid{
+  border: 1px solid red;
 }

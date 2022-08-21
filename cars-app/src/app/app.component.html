@@ -201,11 +201,11 @@
   <div class="container">
     <h2 class="sub-title">Узнать цену и забронировать</h2>
     <div class="price-text">Заполните данные, и мы перезвоним вам для уточнения всех деталей бронирования</div>
-    <form action="" class="price-form">
-      <input type="text" class="price-input" placeholder="Ваше имя" id="name">
-      <input type="text" class="price-input" placeholder="Ваш телефон" id="phone">
-      <input type="text" class="price-input" placeholder="Автомобиль, который вас интересует" id="car">
-      <button class="button" type="button" id="price-action">Узнать цену</button>
+    <form action="" class="price-form" [formGroup]="priceForm">
+      <input type="text" class="price-input" placeholder="Ваше имя" id="name" formControlName="name">
+      <input type="text" class="price-input" placeholder="Ваш телефон" id="phone" formControlName="phone">
+      <input type="text" class="price-input" placeholder="Автомобиль, который вас интересует" id="car" formControlName="car">
+      <button class="button" type="button" id="price-action" (click)="onSubmit()" [disabled]="!priceForm.valid">Узнать цену</button>
     </form>
     <img src="../assets/images/rolls.png" alt="Rolls" class="price-image">
   </div>

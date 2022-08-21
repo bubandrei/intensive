@@ -20,5 +20,10 @@ export class AppComponent {
 
   goScroll(target: HTMLElement){
     target.scrollIntoView({behavior:"smooth"})
+  };
+  onSubmit(){
+    if(this.priceForm.valid){
+      alert("Спасибо за заявку, мы свяжемся с вами в ближайшее время!")
+    }
   }
 }
