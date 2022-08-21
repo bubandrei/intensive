@@ -23,7 +23,8 @@ export class AppComponent {
   };
   onSubmit(){
     if(this.priceForm.valid){
-      alert("Спасибо за заявку, мы свяжемся с вами в ближайшее время!")
+      alert("Спасибо за заявку, мы свяжемся с вами в ближайшее время!");
+      this.priceForm.reset();
     }
   }
 }
