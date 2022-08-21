@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 
 @Component({
@@ -10,21 +10,32 @@ export class AppComponent {
   title = 'cars-app';
 
   priceForm = this.fb.group({
-    name:['', Validators.required],
-    phone:['', Validators.required],
-    car:['', Validators.required]
-  })
+    name: ['', Validators.required],
+    phone: ['', Validators.required],
+    car: ['', Validators.required]
+  });
 
-  constructor(private fb:FormBuilder) {
-  }
+  carsData = [
+    {
+      image: "1.png",
+      name: "Lamborghini Huracan Spyder",
+      gear: "полный",
+      engine: 5.2,
+      places: 2
+    }
+  ];
 
-  goScroll(target: HTMLElement){
-    target.scrollIntoView({behavior:"smooth"})
+  constructor(private fb: FormBuilder) {
   };
-  onSubmit(){
-    if(this.priceForm.valid){
+
+  goScroll(target: HTMLElement) {
+    target.scrollIntoView({behavior: "smooth"})
+  };
+
+  onSubmit() {
+    if (this.priceForm.valid) {
       alert("Спасибо за заявку, мы свяжемся с вами в ближайшее время!");
       this.priceForm.reset();
-    }
-  }
+    };
+  };
 }
