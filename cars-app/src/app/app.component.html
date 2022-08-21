@@ -38,160 +38,30 @@
   <div class="container">
     <h2 class="sub-title">Наш автопарк</h2>
     <div class="car-items">
-      <div class="car-item car-button">
+      <div class="car-item" *ngFor="let car of carsData">
         <div class="car-item-image">
-          <img src="../assets/images/1.png" alt="Image 1">
+          <img src="../assets/images/{{car.image}}" alt="Image">
         </div>
-        <div class="car-item-title">Lamborghini Huracan Spyder</div>
+        <div class="car-item-title">{{car.name}}</div>
         <div class="car-item-info">
           <div class="car-item-point">
             <img src="../assets/images/gear.png" alt="Gear">
             <div>Привод</div>
-            <div>полный</div>
+            <div>{{car.gear}}</div>
           </div>
           <div class="car-item-point">
             <img src="../assets/images/wheel.png" alt="Wheel">
             <div>Двигатель</div>
-            <div>5.2 л.с.</div>
+            <div>{{car.engine}} л.с.</div>
           </div>
           <div class="car-item-point">
             <img src="../assets/images/belt.png" alt="Belt">
             <div>Кол-во мест</div>
-            <div>2</div>
+            <div>{{car.places}}</div>
           </div>
         </div>
         <div class="car-item-action">
           <button class="button" (click)="goScroll(price)">Забронировать</button>
-        </div>
-      </div>
-      <div class="car-item car-button">
-        <div class="car-item-image">
-          <img src="../assets/images/2.png" alt="Image 2">
-        </div>
-        <div class="car-item-title">Chevrolet Corvette</div>
-        <div class="car-item-info">
-          <div class="car-item-point">
-            <img src="../assets/images/gear.png" alt="Gear">
-            <div>Привод</div>
-            <div>полный</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/wheel.png" alt="Wheel">
-            <div>Двигатель</div>
-            <div>6.2 л.с.</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/belt.png" alt="Belt">
-            <div>Кол-во мест</div>
-            <div>2</div>
-          </div>
-        </div>
-        <div class="car-item-action">
-          <button class="button"(click)="goScroll(price)">Забронировать</button>
-        </div>
-      </div>
-      <div class="car-item car-button">
-        <div class="car-item-image">
-          <img src="../assets/images/3.png" alt="Image 3">
-        </div>
-        <div class="car-item-title">Ferrari California</div>
-        <div class="car-item-info">
-          <div class="car-item-point">
-            <img src="../assets/images/gear.png" alt="Gear">
-            <div>Привод</div>
-            <div>полный</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/wheel.png" alt="Wheel">
-            <div>Двигатель</div>
-            <div>3.9 л.с.</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/belt.png" alt="Belt">
-            <div>Кол-во мест</div>
-            <div>4</div>
-          </div>
-        </div>
-        <div class="car-item-action">
-          <button class="button"(click)="goScroll(price)">Забронировать</button>
-        </div>
-      </div>
-      <div class="car-item car-button">
-        <div class="car-item-image">
-          <img src="../assets/images/4.png" alt="Image 4">
-        </div>
-        <div class="car-item-title">Lamborghini Urus</div>
-        <div class="car-item-info">
-          <div class="car-item-point">
-            <img src="../assets/images/gear.png" alt="Gear">
-            <div>Привод</div>
-            <div>полный</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/wheel.png" alt="Wheel">
-            <div>Двигатель</div>
-            <div>4.0 л.с.</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/belt.png" alt="Belt">
-            <div>Кол-во мест</div>
-            <div>5</div>
-          </div>
-        </div>
-        <div class="car-item-action">
-          <button class="button"(click)="goScroll(price)">Забронировать</button>
-        </div>
-      </div>
-      <div class="car-item car-button">
-        <div class="car-item-image">
-          <img src="../assets/images/5.png" alt="Image 5">
-        </div>
-        <div class="car-item-title">Audi R8</div>
-        <div class="car-item-info">
-          <div class="car-item-point">
-            <img src="../assets/images/gear.png" alt="Gear">
-            <div>Привод</div>
-            <div>полный</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/wheel.png" alt="Wheel">
-            <div>Двигатель</div>
-            <div>5.2 л.с.</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/belt.png" alt="Belt">
-            <div>Кол-во мест</div>
-            <div>2</div>
-          </div>
-        </div>
-        <div class="car-item-action">
-          <button class="button"(click)="goScroll(price)">Забронировать</button>
-        </div>
-      </div>
-      <div class="car-item car-button">
-        <div class="car-item-image">
-          <img src="../assets/images/6.png" alt="Image 6">
-        </div>
-        <div class="car-item-title">Аренда Chevrolet Camaro</div>
-        <div class="car-item-info">
-          <div class="car-item-point">
-            <img src="../assets/images/gear.png" alt="Gear">
-            <div>Привод</div>
-            <div>полный</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/wheel.png" alt="Wheel">
-            <div>Двигатель</div>
-            <div>2.0 л.с.</div>
-          </div>
-          <div class="car-item-point">
-            <img src="../assets/images/belt.png" alt="Belt">
-            <div>Кол-во мест</div>
-            <div>4</div>
-          </div>
-        </div>
-        <div class="car-item-action">
-          <button class="button"(click)="goScroll(price)">Забронировать</button>
         </div>
       </div>
     </div>
