@@ -89,7 +89,15 @@ export class AppComponent {
     if (this.priceForm.valid) {
 
       this.appService.sendQuery(this.priceForm.value)
-        .subscribe(result=>console.log(result));
+        .subscribe({
+          next:(response:any)=>{
+            alert(response.message);
+            this.priceForm.reset();
+          },
+          error:(response)=>{
+            alert(response.error.message);
+          }
+        });
 
       alert("Спасибо за заявку, мы свяжемся с вами в ближайшее время!");
       this.priceForm.reset();
