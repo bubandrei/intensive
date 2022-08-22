@@ -1,5 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
+import {AppService} from "./app.service";
 
 @Component({
   selector: 'app-root',
@@ -60,7 +61,7 @@ export class AppComponent {
     }
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private appService: AppService) {
   };
 
   goScroll(target: HTMLElement, car?: any) {
@@ -86,9 +87,12 @@ export class AppComponent {
 
   onSubmit() {
     if (this.priceForm.valid) {
+
+      this.appService.sendQuery(this.priceForm.value)
+        .subscribe(result=>console.log(result));
+
       alert("Спасибо за заявку, мы свяжемся с вами в ближайшее время!");
       this.priceForm.reset();
-    }
-    ;
+    };
   };
 }
